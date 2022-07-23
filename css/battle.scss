@@ -6,13 +6,35 @@ img{
     height: 200px;
     width: 250px;
 }
+#green_text{
+    a{
+        text-decoration: none;
+        color: green;
+        &:visited{
+            text-decoration: none;
+        }
+    }
+}
 #enemy_pokemon{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    .pokemon_image{
-        justify-self: end;
-    }
-    .pokemon_description{
+   align-items: center;
+    #enemy_pokemon_image{
         justify-self: center;
     }
+    #enemy_pokemon_description{
+        justify-self: start;
+    }
+}
+#user_pokemon{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    #user_pokemon_image{
+        justify-self: center;
+    }
+    #user_pokemon_description{
+        justify-self: start;
+    }
+
 }

@@ -6,6 +6,16 @@ img{
     height: 150px;
     width: 200px;
 }
+#green_text{
+    a{
+        text-decoration: none;
+        color: green;
+        &:visited{
+            text-decoration: none;
+            color: green;
+        }
+    }
+}
 #pokemon_container{
     display: grid;
     grid-template-columns: 1fr 1fr;

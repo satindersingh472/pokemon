@@ -8,13 +8,34 @@ img {
   width: 250px;
 }
 
+#green_text a {
+  text-decoration: none;
+  color: green;
+}
+#green_text a:visited {
+  text-decoration: none;
+}
+
 #enemy_pokemon {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  align-items: center;
 }
-#enemy_pokemon .pokemon_image {
-  justify-self: end;
-}
-#enemy_pokemon .pokemon_description {
+#enemy_pokemon #enemy_pokemon_image {
   justify-self: center;
+}
+#enemy_pokemon #enemy_pokemon_description {
+  justify-self: start;
+}
+
+#user_pokemon {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+#user_pokemon #user_pokemon_image {
+  justify-self: center;
+}
+#user_pokemon #user_pokemon_description {
+  justify-self: start;
 }/*# sourceMappingURL=battle.css.map */
