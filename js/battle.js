@@ -11,6 +11,22 @@ function show_user_pokemon(details){
 
 }
 
+function decrease_health(details){
+    
+    if(enemy_health_cookies > 0 && user_health_cookies > 0) {
+        enemy_health_cookies = enemy_health_cookies - Math.floor(Math.random() * 4);
+        user_health_cookies = user_health_cookies - Math.floor(Math.random()*3);
+        Cookies.set(`enemy_health`, enemy_health_cookies);
+        Cookies.set(`user_health`,user_health_cookies);
+        enemy_health_number[`innerHTML`] = enemy_health_cookies;
+        user_health_number[`innerHTML`] = user_health_cookies;
+    } else if (enemy_health_cookies <= 0 && user_health_cookies > 0){
+                result[`innerHTML`] = `<h2>Congratulations user won!!!</h2>`;
+    }   else if (enemy_health_cookies > 0 && user_health_cookies <= 0){
+        result[`innerHTML`] = `<h2>Congratulations to the computer!!!!</h2>`;
+    }    
+}
+
 let enemy_image = document.getElementById(`enemy_pokemon_image`);
 let enemy_description = document.getElementById(`enemy_pokemon_description`);
 
@@ -44,16 +60,18 @@ if(user_parse_cookies_pokemon[`name`] === `Dragon`){
 }
 
 
-function decrease_health(details){
-    let enemy_health = Cookies.get(`enemy_health`);
-     let new_health = enemy_health - 5;
-     Cookies.set(`enemy_health`, new_health);
-      health_number[`innerHTML`] = new_health;
-}
 let dragon_attack = document.getElementById(`attack_from_Dragon`);
 dragon_attack.addEventListener(`click`,decrease_health);
  
-// let frog_attack = document.getElementById(`attack_from_Frog`);
-// frog_attack.addEventListener(`click`, decrease_health);
+let frog_attack = document.getElementById(`attack_from_Frog`);
+frog_attack.addEventListener(`click`,decrease_health);
 
-let health_number = document.getElementById(`enemy_health_points`);
+let pikachu_attack = document.getElementById(`attack_from_Pikachu`);
+pikachu_attack.addEventListener(`click`,decrease_health);
+
+let stone_attack = document.getElementById(`attack_from_Stone`);
+stone_attack.addEventListener(`click`,decrease_health);
+
+let enemy_health_number = document.getElementById(`enemy_health_points`);
+let user_health_number = document.getElementById(`user_health_points`);
+let result = document.getElementById(`result`);
