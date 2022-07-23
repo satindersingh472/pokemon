@@ -1,1 +1,20 @@
-/*# sourceMappingURL=battle.css.map */
+body {
+  margin: auto;
+  text-align: center;
+}
+
+img {
+  height: 200px;
+  width: 250px;
+}
+
+#enemy_pokemon {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+#enemy_pokemon .pokemon_image {
+  justify-self: end;
+}
+#enemy_pokemon .pokemon_description {
+  justify-self: center;
+}/*# sourceMappingURL=battle.css.map */
