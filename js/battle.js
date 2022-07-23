@@ -48,29 +48,34 @@ let enemy_health_cookies = Cookies.get(`enemy_health`);
 if(user_parse_cookies_pokemon[`name`] === `Dragon`){
     show_enemy_pokemon();
     show_user_pokemon();
-} else if (user_parse_cookies_pokemon[`name`] === `Frog`){
-    show_enemy_pokemon();
-    show_user_pokemon();
-} else if (user_parse_cookies_pokemon[`name`] === `Pikachu`){
-    show_enemy_pokemon();
-    show_user_pokemon();
-} else if (user_parse_cookies_pokemon[`name`] === `Stone`){
-    show_enemy_pokemon();
-    show_user_pokemon();
-}
-
 
 let dragon_attack = document.getElementById(`attack_from_Dragon`);
 dragon_attack.addEventListener(`click`,decrease_health);
  
-let frog_attack = document.getElementById(`attack_from_Frog`);
+} else if (user_parse_cookies_pokemon[`name`] === `Frog`){
+    show_enemy_pokemon();
+    show_user_pokemon();
+    let frog_attack = document.getElementById(`attack_from_Frog`);
 frog_attack.addEventListener(`click`,decrease_health);
+
+} else if (user_parse_cookies_pokemon[`name`] === `Pikachu`){
+    show_enemy_pokemon();
+    show_user_pokemon();
 
 let pikachu_attack = document.getElementById(`attack_from_Pikachu`);
 pikachu_attack.addEventListener(`click`,decrease_health);
 
+
+} else if (user_parse_cookies_pokemon[`name`] === `Stone`){
+    show_enemy_pokemon();
+    show_user_pokemon();
+
 let stone_attack = document.getElementById(`attack_from_Stone`);
 stone_attack.addEventListener(`click`,decrease_health);
+
+}
+
+
 
 let enemy_health_number = document.getElementById(`enemy_health_points`);
 let user_health_number = document.getElementById(`user_health_points`);
