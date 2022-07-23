@@ -1,0 +1,27 @@
+body{
+    margin: auto;
+    text-align: center;
+}
+img{
+    height: 150px;
+    width: 200px;
+}
+#pokemon_container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+    .pokemon_content{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        place-items: center;
+        .pokemon_image{
+            padding: 20px;
+        }
+        .pokemon_description{
+            
+            button{
+                padding: 10px;
+            }
+        }
+    }
+}
