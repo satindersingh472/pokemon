@@ -60,21 +60,21 @@ let user_health_cookies = Cookies.get(`user_health`);
 // grabb enemy health cookies and store in enemy health cookies no need to parse them because not a complex data
 let enemy_health_cookies = Cookies.get(`enemy_health`);
 
-
 // below loop will check the cookies for name and after finding the appropriate name it executes the two functions
 if (user_parse_cookies_pokemon[`name`] === `Dragon`) {
     show_enemy_pokemon();
     show_user_pokemon();
-
+// attack from dragon button shows up in a user side pokemon with specific id 
     let dragon_attack = document.getElementById(`attack_from_Dragon`);
     dragon_attack.addEventListener(`click`, decrease_health);
-
+// if user cookies has frog in it then it will create a user pokemon frog and button with id attack from frog
 } else if (user_parse_cookies_pokemon[`name`] === `Frog`) {
     show_enemy_pokemon();
     show_user_pokemon();
+
     let frog_attack = document.getElementById(`attack_from_Frog`);
     frog_attack.addEventListener(`click`, decrease_health);
-
+// if user cookies has pikachu then pikachu will get displayed in user section and button named attack with id attack from pikachu
 } else if (user_parse_cookies_pokemon[`name`] === `Pikachu`) {
     show_enemy_pokemon();
     show_user_pokemon();
@@ -82,7 +82,7 @@ if (user_parse_cookies_pokemon[`name`] === `Dragon`) {
     let pikachu_attack = document.getElementById(`attack_from_Pikachu`);
     pikachu_attack.addEventListener(`click`, decrease_health);
 
-
+// if user cookies has stone, stone pokemon will get displayed in the battlefield and along with attack button
 } else if (user_parse_cookies_pokemon[`name`] === `Stone`) {
     show_enemy_pokemon();
     show_user_pokemon();
@@ -93,7 +93,9 @@ if (user_parse_cookies_pokemon[`name`] === `Dragon`) {
 }
 
 
-
+// grab a div to write innerhtml for enemy health points
 let enemy_health_number = document.getElementById(`enemy_health_points`);
+// grab a dic to write innerhtml for user health points
 let user_health_number = document.getElementById(`user_health_points`);
+// grab a result div to write innerhtml for showing result
 let result = document.getElementById(`result`);
